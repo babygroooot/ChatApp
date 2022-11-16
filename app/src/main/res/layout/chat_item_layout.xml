@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/receiver_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_chat_receiver"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:text="Receiver"
+        android:textColor="@color/colorBlack"
+        android:lineSpacingExtra="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        android:maxWidth="240dp"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/sender_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingVertical="16dp"
+        android:paddingHorizontal="16dp"
+        android:text="Sender"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/white"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/bg_chat_sender"
+        android:layout_marginEnd="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:maxWidth="240dp"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/receiver_iv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="10dp"
+        tools:src="@mipmap/ic_launcher"/>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/sender_iv"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentEnd="true"
+        android:maxWidth="240dp"
+        tools:src="@mipmap/ic_launcher"/>
+
+</RelativeLayout>
