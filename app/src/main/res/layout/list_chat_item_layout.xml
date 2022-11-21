@@ -6,7 +6,7 @@
 
         <variable
             name="model"
-            type="com.example.chatapp.UserModel" />
+            type="com.example.chatapp.model.UserModel" />
 
     </data>
 

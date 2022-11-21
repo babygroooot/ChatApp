@@ -1,17 +1,14 @@
-package com.example.chatapp.Activity
+package com.example.chatapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.View
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import com.example.chatapp.R
 import com.example.chatapp.databinding.ActivitySplashScreenBinding
-import com.google.android.material.elevation.SurfaceColors
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

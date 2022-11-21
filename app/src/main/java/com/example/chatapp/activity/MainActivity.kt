@@ -1,8 +1,10 @@
-package com.example.chatapp.Activity
+package com.example.chatapp.activity
 
 import android.annotation.SuppressLint
 import android.net.Uri
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.util.Log
 import android.view.View
 import android.widget.EdgeEffect
@@ -11,12 +13,13 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chatapp.ChatAdapter
-import com.example.chatapp.MessageModel
+import com.example.chatapp.adapter.ChatAdapter
+import com.example.chatapp.model.MessageModel
 import com.example.chatapp.R
-import com.example.chatapp.UserModel
+import com.example.chatapp.model.UserModel
 import com.example.chatapp.databinding.ActivityMainBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DataSnapshot
@@ -57,6 +60,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun setUpCallback() {
         activityResultLauncher = registerForActivityResult(ActivityResultContracts.GetContent()) {
+            Log.d("xxxxxxxxxxxxxxxxx","$it")
             if (it != null) {
                 selectedImage = it
                 val senderId = Firebase.auth.currentUser!!.uid
@@ -89,6 +93,27 @@ class MainActivity : AppCompatActivity() {
         binding.backpressIv.setOnClickListener {
             finish()
         }
+
+        binding.chatTextbox.addTextChangedListener(object : TextWatcher{
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {
+            }
+
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
+                if (!s.isNullOrBlank()){
+                    binding.voiceIv.visibility = View.GONE
+                    binding.sendIv.visibility = View.VISIBLE
+                }
+                else{
+                    binding.voiceIv.visibility = View.VISIBLE
+                    binding.sendIv.visibility = View.GONE
+                }
+            }
+
+            override fun afterTextChanged(s: Editable?) {
+            }
+
+        })
+
         senderRoom = receiverId + senderId
         receiverRoom = senderId + receiverId
         binding.sendIv.setOnClickListener {

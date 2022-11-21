@@ -1,4 +1,4 @@
-package com.example.chatapp.Activity
+package com.example.chatapp.activity
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
@@ -7,12 +7,11 @@ import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import com.example.chatapp.R
-import com.example.chatapp.UserModel
+import com.example.chatapp.model.UserModel
 import com.example.chatapp.databinding.ActivitySignUpBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ktx.database
 import com.google.firebase.ktx.Firebase
 

@@ -1,4 +1,4 @@
-package com.example.chatapp.Activity
+package com.example.chatapp.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -8,7 +8,6 @@ import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
 import com.example.chatapp.R
 import com.example.chatapp.databinding.ActivityLoginBinding
-import com.google.android.material.elevation.SurfaceColors
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase

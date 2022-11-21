@@ -1,15 +1,17 @@
-package com.example.chatapp
+package com.example.chatapp.adapter
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.example.chatapp.model.UserModel
+import com.example.chatapp.RecyclerViewItemClick
 import com.example.chatapp.databinding.ListChatItemLayoutBinding
 import com.google.firebase.auth.ktx.auth
 import com.google.firebase.ktx.Firebase
 
-class ListChatAdapter(private val context:Context, private val userList: ArrayList<UserModel>, val recyclerViewItemClick: RecyclerViewItemClick) :
+class ListChatAdapter(private val context:Context, private val userList: ArrayList<UserModel>, private val recyclerViewItemClick: RecyclerViewItemClick) :
     RecyclerView.Adapter<ListChatAdapter.ViewHolder>(){
 
     inner class ViewHolder(val binding: ListChatItemLayoutBinding) : RecyclerView.ViewHolder(binding.root)

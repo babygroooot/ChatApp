@@ -1,4 +1,4 @@
-package com.example.chatapp.Activity
+package com.example.chatapp.activity
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -7,21 +7,18 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.EdgeEffect
 import android.widget.Toast
-import android.window.OnBackInvokedDispatcher
 import androidx.activity.OnBackPressedCallback
-import androidx.activity.OnBackPressedDispatcher
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.chatapp.ListChatAdapter
+import com.example.chatapp.adapter.ListChatAdapter
 import com.example.chatapp.R
 import com.example.chatapp.RecyclerViewItemClick
-import com.example.chatapp.UserModel
+import com.example.chatapp.model.UserModel
 import com.example.chatapp.databinding.ActivityListChatBinding
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
